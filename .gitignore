@@ -1,0 +1,5 @@
+.idea
+old/
+exportToHTML/
+venv/
+__pycache__/
