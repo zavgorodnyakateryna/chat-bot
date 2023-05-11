@@ -14,7 +14,7 @@ state = [0,0]
 
 
 def handle_user_input():
-    user_input = input("Користувач: ")
+    user_input = prompt.user_say()
     if user_input.lower() == "назад":
         return (Command.BACK, False)
     if user_input.lower() == "допомога":
@@ -43,11 +43,12 @@ while(True):
                 prompt.bot_say("Я не знаю таку тему(")
                 continue
         if command == Command.EXIT:
+            prompt.bot_say("Бувайте!")
             break
         if command == Command.BACK:
             continue
         if command == Command.HELP:
-            prompt.bot_say("Some help here")
+            prompt.bot_say("Оберіть тему та напишіть мені її! Щоб вийти, напишіть 'вихід'")
 
 
     elif not state[1]:
@@ -76,7 +77,7 @@ while(True):
             if subtopic_id:
                 state[1] = subtopic_id
             else:
-                prompt.bot_say("Я не знаю таку тему(")
+                prompt.bot_say("Я не знаю таку тему")
                 continue
         if command == Command.EXIT:
             break
@@ -84,7 +85,7 @@ while(True):
             state = [0,0]
             continue
         if command == Command.HELP:
-            prompt.bot_say("Some more help here")
+            prompt.bot_say("Оберіть тему та напишіть мені її! Щоб вийти, напишіть 'вихід' \nЩоб повернутись та обрати іншу тему, натисність 'назад'")
     else:
         calculate.run(state)
         state = [0,0]

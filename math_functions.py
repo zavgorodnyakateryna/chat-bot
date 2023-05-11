@@ -2,7 +2,7 @@ import prompt
 import math
 def calc_feb():
     prompt.bot_say("Введіть число n")
-    n = int(input('Користувач: '))
+    n = int(prompt.user_say())
     feb_list = []
     i = 0
     while i < n:
@@ -17,37 +17,38 @@ def calc_feb():
 
 def circle():
     prompt.bot_say("Введіть радіус кола")
-    circle_radius_respond = int(input('Користувач: '))
+
+    circle_radius_respond = int(prompt.user_say())
     print()
     prompt.bot_say("Dведіть чому дорівнює центральний кут виміряний у радіанах")
-    central_corner_respond = float(input('Користувач: '))
+    central_corner_respond = float(prompt.user_say())
     print()
     arc_length = circle_radius_respond * central_corner_respond
     prompt.bot_say(f"""Довжина дуги кола: {arc_length}""")
 
 def triangle():
         prompt.bot_say("Введіть координату Х першого вектора")
-        first_x = float(input('Користувач: '))
+        first_x = float(prompt.user_say())
         print()
 
         prompt.bot_say("Введіть координату Y першого вектора")
-        first_y = float(input('User: '))
+        first_y = float(prompt.user_say())
         print()
 
         prompt.bot_say("Введіть координату Z першого вектора")
-        first_z = float(input('User: '))
+        first_z = float(prompt.user_say())
         print()
 
         prompt.bot_say("Введіть координату Х другого вектора")
-        second_x = float(input('User: '))
+        second_x = float(prompt.user_say())
         print()
 
         prompt.bot_say("Введіть координату Y другого вектора")
-        second_y = float(input('User: '))
+        second_y = float(prompt.user_say())
         print()
 
         prompt.bot_say("Бот: Введіть координату Z другого вектора")
-        second_z = float(input('User: '))
+        second_z = float(prompt.user_say())
         print()
 
         triangle_s = 1/2 * math.sqrt(
