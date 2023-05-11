@@ -8,7 +8,7 @@ def bot_say(message):
     print(PURPLE + "Бот: " + RESET, message)
     log("Бот: " + message)
 
-def user_say(message = ""):
+def get_user_input(message =""):
     user_input = input(BLUE + "Користувач: " + message + RESET)
     log("Користувач: " + user_input)
     return user_input

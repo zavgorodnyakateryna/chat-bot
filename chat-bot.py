@@ -14,7 +14,7 @@ state = [0,0]
 
 
 def handle_user_input():
-    user_input = prompt.user_say()
+    user_input = prompt.get_user_input()
     if user_input.lower() == "назад":
         return (Command.BACK, False)
     if user_input.lower() == "допомога":
