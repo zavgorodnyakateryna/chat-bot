@@ -20,7 +20,7 @@ def circle():
 
     circle_radius_respond = int(prompt.user_say())
     print()
-    prompt.bot_say("Dведіть чому дорівнює центральний кут виміряний у радіанах")
+    prompt.bot_say("Введіть чому дорівнює центральний кут виміряний у радіанах")
     central_corner_respond = float(prompt.user_say())
     print()
     arc_length = circle_radius_respond * central_corner_respond
