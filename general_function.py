@@ -14,7 +14,12 @@ def what_year():
 
 def guess_numb():
     prompt.bot_say("Напишіть число між 1 та 10")
-    user_number = int(prompt.get_user_input())
+    (command, user_number) = prompt.handle_input_as_int()
+    if command == prompt.Command.BACK:
+        return
+    if command == prompt.Command.EXIT:
+        prompt.bot_say("Бувайте!")
+        exit(0)
     print()
     bot_number = random.randint(1, 10)
     prompt.bot_say(f"""Я загадав {bot_number} """)

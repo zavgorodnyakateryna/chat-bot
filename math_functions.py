@@ -2,7 +2,12 @@ import prompt
 import math
 def calc_feb():
     prompt.bot_say("Введіть число n")
-    n = int(prompt.get_user_input())
+    (command, n) = prompt.handle_input_as_int()
+    if command == prompt.Command.BACK:
+        return
+    if command == prompt.Command.EXIT:
+        prompt.bot_say("Бувайте!")
+        exit(0)
     feb_list = []
     i = 0
     while i < n:
@@ -18,37 +23,77 @@ def calc_feb():
 def circle():
     prompt.bot_say("Введіть радіус кола")
 
-    circle_radius_respond = int(prompt.get_user_input())
+    (command, circle_radius_respond) = prompt.handle_input_as_float()
+    if command == prompt.Command.BACK:
+        return
+    if command == prompt.Command.EXIT:
+        prompt.bot_say("Бувайте!")
+        exit(0)
     print()
     prompt.bot_say("Введіть чому дорівнює центральний кут виміряний у радіанах")
-    central_corner_respond = float(prompt.get_user_input())
+    (command, central_corner_respond) = prompt.handle_input_as_float()
+    if command == prompt.Command.BACK:
+        return
+    if command == prompt.Command.EXIT:
+        prompt.bot_say("Бувайте!")
+        exit(0)
     print()
     arc_length = circle_radius_respond * central_corner_respond
     prompt.bot_say(f"""Довжина дуги кола: {arc_length}""")
 
 def triangle():
         prompt.bot_say("Введіть координату Х першого вектора")
-        first_x = float(prompt.get_user_input())
+        (command, first_x) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         prompt.bot_say("Введіть координату Y першого вектора")
-        first_y = float(prompt.get_user_input())
+        (command, first_y) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         prompt.bot_say("Введіть координату Z першого вектора")
-        first_z = float(prompt.get_user_input())
+        (command, first_z) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         prompt.bot_say("Введіть координату Х другого вектора")
-        second_x = float(prompt.get_user_input())
+        (command, second_x) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         prompt.bot_say("Введіть координату Y другого вектора")
-        second_y = float(prompt.get_user_input())
+        (command, second_y) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         prompt.bot_say("Бот: Введіть координату Z другого вектора")
-        second_z = float(prompt.get_user_input())
+        (command, second_z) = prompt.handle_input_as_float()
+        if command == prompt.Command.BACK:
+            return
+        if command == prompt.Command.EXIT:
+            prompt.bot_say("Бувайте!")
+            exit(0)
         print()
 
         triangle_s = 1/2 * math.sqrt(
